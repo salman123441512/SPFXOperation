@@ -78,7 +78,7 @@ const GetItem: React.FC =  () => {
     });
 };
 
-
+// Get specific column Data from SharePoni List
 
    const getdata = async () => {
     try {
@@ -89,13 +89,15 @@ const GetItem: React.FC =  () => {
     }
   };
 
+  // Search A Particular Item
+ 
   const mysearch = () => {
     debugger;
     const searchInput = document.getElementById('search') as HTMLInputElement;
     if (searchInput) {
       const lowercasedSearch = searchInput.value.toLowerCase();
-  
-       totaldata.some((x) =>{
+     
+       totaldata.find((x) =>{
          if(x.Name.toLowerCase() === lowercasedSearch){
          setSearch(x.Name + 'Exists')
          }
