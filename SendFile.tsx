@@ -49,6 +49,9 @@ const SendFile: React.FC = () => {
             alert('No file selected.');
         }
     };
+
+    // Get the Current User
+    
     const getmycurrentUser = async () => {
         try {
             let response = await sp.web.currentUser.get()
